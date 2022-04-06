@@ -1,6 +1,18 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+class Dir
+  class << self
+    alias_method :old_exist, :exist?
+    def exist? (var)
+      if var == '/tmp_docker'
+        return true
+      else
+        old_exist (var)
+      end
+    end
+  end
+end
 
 compose = Puppet::Type.type(:docker_compose)
 
