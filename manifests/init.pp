@@ -658,10 +658,10 @@ class docker (
     -> Class['docker::service']
     -> Docker::Registry <||>
     -> Docker::Image <||>
-    -> Docker::Run <||>
     -> Docker_network <||>
     -> Docker_volume <||>
     -> Docker_stack <||>
+    -> Docker::Run <||>
     -> Docker_compose <||>
   } else {
     contain 'docker::repos'
