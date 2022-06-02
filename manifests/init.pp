@@ -659,6 +659,9 @@ class docker (
     -> Docker::Registry <||>
     -> Docker::Image <||>
     -> Docker::Run <||>
+    -> Docker_network <||>
+    -> Docker_volume <||>
+    -> Docker_stack <||>
     -> Docker_compose <||>
   } else {
     contain 'docker::repos'
